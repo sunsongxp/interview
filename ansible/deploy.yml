@@ -6,3 +6,4 @@
     - name: Load the cache / inventory
       ping: {}
 
+#- include: deploy-app.yml

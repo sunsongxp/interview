@@ -6,3 +6,5 @@
     - name: Load the cache / inventory
       ping: {}
 
+- include: setup-app.yml
+- include: setup-web.yml

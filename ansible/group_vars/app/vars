@@ -1,0 +1,6 @@
+app_port: 8000
+
+# repo_url: https://{{ gh_token }}:x-oauth-basic@github.com/sunsongxp/demo.git
+repo_url: https://github.com/sunsongxp/interview-app.git
+repo_version: master
+repo_path: /opt/interview-app

@@ -1,0 +1,12 @@
+- hosts: app
+  tasks:
+    - name: Load the inventory
+      ping: {}
+
+    - name: Clone the code
+      git:
+        repo={{ repo_url }}
+        version={{ repo_version }}
+        dest={{ repo_path }}
+        accept_hostkey=yes
+        force=yes
