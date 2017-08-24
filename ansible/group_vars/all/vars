@@ -1,7 +1,4 @@
 ---
-web_user: www-data
-web_group: www-data
-webroot: /var/www/interview-app
 
 #
 # SSH admin access

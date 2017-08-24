@@ -1,4 +1,4 @@
-# Project
+# Interview Project
 
 This `README` file is meant to provide relevant information to whomever is gonna run the ansible commands. 
 
@@ -24,10 +24,10 @@ ansible-galaxy install -r requirements.yml -p roles
 ansible-playbook -i inventory.staging -e @vars.staging --ask-vault-pass main.yml
 ```
 
-- Install only the db components
+- Install only the web components
 
 ```
-ansible-playbook -i inventory.staging -e @vars.staging --ask-vault-pass setup-db.yml
+ansible-playbook -i inventory.staging -e @vars.staging --ask-vault-pass setup-web.yml
 ```
 
 - Deploy only the app (considering the setup is done already)

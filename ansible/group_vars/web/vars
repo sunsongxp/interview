@@ -2,6 +2,10 @@ nginx_listen: 127.0.0.1:8080
 domain: sample-project.com
 static_domain: static.sample-project.com
 
+web_user: www-data
+web_group: www-data
+webroot: /var/www/interview-app/
+
 # ssl_cert: "{{ vault_ssl_cert }}"
 # ssl_key: "{{ vault_ssl_key }}"
 # ssl_dhparam: "{{ vault_ssl_dhparam }}"

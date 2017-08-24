@@ -6,4 +6,20 @@
     - name: Load the cache / inventory
       ping: {}
 
-#- include: deploy-app.yml
+- hosts: app
+  tasks:
+    - name: Clone the code
+      git:
+        repo={{ repo_url }}
+        version={{ repo_version }}
+        dest={{ repo_path }}
+        accept_hostkey=yes
+        force=yes
+
+    # Other steps can be included: build the app, generate executable file, generate static files...
+
+- hosts: web
+  tasks:
+    - name: Copy the static files to web folder
+      command:
+        rsync -av --delete {{ repo_path }}/static/ {{ webroot }}
