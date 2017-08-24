@@ -1,10 +1,8 @@
 [app]
-staging-app-1
-staging-app-2
+staging
 
-[db]
-staging-db-1
-staging-db-2
+[web]
+staging
 
 
 [all-staging:children]

@@ -1,8 +1,8 @@
 [app]
-dev-app
+dev
 
 [db]
-dev-db
+dev
 
 [all-dev:children]
 app

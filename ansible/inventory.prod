@@ -1,10 +1,8 @@
 [app]
-prod-app-1
-prod-app-2
+prod
 
 [db]
-prod-db-1
-prod-db-2
+prod
 
 
 [all-prod:children]
