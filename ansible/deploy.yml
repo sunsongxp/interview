@@ -17,6 +17,19 @@
         force=yes
 
     # Other steps can be included: build the app, generate executable file, generate static files...
+    - name: Install app packages
+      pip:
+        requirements: "{{ repo_path }}/requirements.txt"
+
+    - name: Create supervisor config
+      template:
+        src: app.conf.j2
+        dest: /etc/supervisor/conf.d/app.conf
+
+    - name: Restart the app
+      supervisorctl:
+        name: app
+        state: restarted
 
 - hosts: web
   tasks:

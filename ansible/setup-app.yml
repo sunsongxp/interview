@@ -11,21 +11,6 @@
         accept_hostkey=yes
         force=yes
 
-    - name: Install app packages
-      pip:
-        requirements: "{{ repo_path }}/requirements.txt"
-
     - name: Install supervisor
       apt:
         name: supervisor
-
-    - name: Create supervisor config
-      template:
-        src: app.conf.j2
-        dest: /etc/supervisor/conf.d/app.conf
-
-    - name: Restart the app
-      supervisorctl:
-        name: app
-        state: restarted
-
