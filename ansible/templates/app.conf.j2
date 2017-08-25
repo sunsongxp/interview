@@ -1,0 +1,14 @@
+[program:app]
+command=gunicorn -w 4 -b 0.0.0.0:{{ app_port }} main:wsgiapp
+directory={{ repo_path }}
+environment=HOME=/root
+autostart=true
+user=root
+
+stdout_logfile=/var/log/supervisor/pipelines.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=100
+
+stderr_logfile=/var/log/supervisor/pipelines.err
+stderr_logfile_maxbytes=100MB
+stderr_logfile_backups=100

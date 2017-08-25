@@ -86,7 +86,7 @@
         app:
           - listen {% if env == "dev" %}0.0.0.0:443 ssl{% else %}{{ nginx_listen }}{% endif %}
           - server_name {{ domain }}
-          - location /api/ { proxy_pass http://app; proxy_set_header Host $host;}
+          - location / { proxy_pass http://app; proxy_set_header Host $host;}
           - error_page 404 /404.html
           - error_page 500 403 =404 /404.html
           - add_header Strict-Transport-Security "max-age=0; includeSubDomains"

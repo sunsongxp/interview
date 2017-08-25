@@ -6,11 +6,11 @@
 wcladmin_ssh_pub_keys:
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkxz58yBatKsaLzP3NHP3YLTwBUBvun8NrbWDydxK6pb3c8bTAtP3i+psfTdLXbIdB4g+sIak7dtiSm8nH2ZeixOLkqFx8lrSBU0MHFSVQFJo4CrXMR2jUIHGtUbuiMnw+zlfalQFKm/dgqOjh/YEEAWBLzxFEbBV1D8PrBXHD6/4WnD9gqh3IuX1FPNlqJ2kN+s6YwchHb+g5aCXTUIP6hbDa4pXgTz4M4P9JvFcrYyzuRl8ZiCjCX9dameVrXaaTgpcbkKVRKeHFLUCX/Zf8X4Ce+AohteCallQdGfft1RsVcQUh7NR5oS3Y5jrVBqvOR7KFFGAnjc+9B+JfDlTl
 
-common_packages_redhat:
+common_packages_debian:
     - htop
     - sysstat
     - atop
     - git
     - wget
-    - net-tools
     - ntp
+    - python-pip
