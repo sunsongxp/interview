@@ -26,6 +26,9 @@ After the installation steps has been completed, point domain `static.sample-pro
 * HA
   - This project can be changed easily to support setting up multiple web / app servers. At the frontend, we can either setup haproxy or keepalived( support floating ip) for high availablility. (Load Balancer -> web(also serving static content) -> app)
 
+* CI
+  - It is interesting to deploy with ansible in jenkins: https://wiki.jenkins.io/display/JENKINS/Ansible+Plugin
+
 ## Pre-requisite
 
 Need:
